@@ -11,7 +11,6 @@ import { HiOutlineUser } from "react-icons/hi2";
 const Nav = () => {
 
     const [selected, setSelected] = useState("");
-    const [selectState, setSelectState] = useState(false)
 
     useEffect(() => {
         if (!selected) {
@@ -27,27 +26,39 @@ const Nav = () => {
         <div className='nav'>
             <ul className='nav__list'>
                 <li className='nav__item'>
-                    <NavLink className='nav__link' onClick={() => { changeSelection("home") }}>
+                    <NavLink
+                        className='nav__link'
+                        onClick={() => { changeSelection("home") }}
+                        to={'/'}>
                         <IoHome className='nav__icon' />
                         {selected === "home" ? <p className='nav__text'>Home</p> : <></>}
                     </NavLink>
                 </li>
                 <li className='nav__item'>
-                    <NavLink className='nav__link' onClick={() => { changeSelection("heart") }}>
+                    <NavLink
+                        className='nav__link'
+                        onClick={() => { changeSelection("favorites") }}
+                        to={'/favorites'}>
                         <GoHeart className='nav__icon' />
-                        {selected === "heart" ? <p className='nav__text'>Wishlist</p> : <></>}
+                        {selected === "favorites" ? <p className='nav__text'>Wishlist</p> : <></>}
                     </NavLink>
                 </li>
                 <li className='nav__item'>
-                    <NavLink className='nav__link' onClick={() => { changeSelection("cart") }}>
+                    <NavLink
+                        className='nav__link'
+                        onClick={() => { changeSelection("checkout") }}
+                        to={'/checkout'}>
                         <AiOutlineShoppingCart className='nav__icon' />
-                        {selected === "cart" ? <p className='nav__text'>Cart</p> : <></>}
+                        {selected === "checkout" ? <p className='nav__text'>Cart</p> : <></>}
                     </NavLink>
                 </li>
                 <li className='nav__item'>
-                    <NavLink className='nav__link' onClick={() => { changeSelection("user") }}>
+                    <NavLink
+                        className='nav__link'
+                        onClick={() => { changeSelection("profile") }}
+                        to={'/profile'}>
                         <HiOutlineUser className='nav__icon' />
-                        {selected === "user" ? <p className='nav__text'>Profile</p> : <></>}
+                        {selected === "profile" ? <p className='nav__text'>Profile</p> : <></>}
                     </NavLink>
                 </li>
             </ul>
