@@ -1,0 +1,25 @@
+@import '../../styles/partials/global';
+
+.nav {
+
+    &__list {
+        @include flexBox(row);
+        justify-content: center;
+        list-style-type: none;
+        margin: 0.5rem;
+    }
+
+    &__link {
+        @include flexBox(row);
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    &__text {
+        margin-right: 0.5rem;
+    }
+
+    &__icon {
+        margin: 0 0.5rem;
+    }
+}

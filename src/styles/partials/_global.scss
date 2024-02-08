@@ -6,7 +6,6 @@
 
 html {
     font-size: 8px;
-    background-color: blanchedalmond;
 }
 
 * {
@@ -19,7 +18,6 @@ html {
 h1 {
     font-size: 3.5rem;
     font-family: $boldFont;
-    color: $RM-Brown;
 
     @include tablet {
         font-size: 4rem;

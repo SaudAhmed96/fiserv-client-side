@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage/HomePage';
 import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import Nav from './components/Nav/Nav';
 
 function App() {
 
@@ -21,8 +22,6 @@ function App() {
         <Route path="*" element={<Navigate to="/error" replace={true} />} />
       </Routes>
       <Nav />
-      <Footer />
-
     </>
   )
 }
