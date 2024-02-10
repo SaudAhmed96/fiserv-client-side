@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Search-bar.scss";
 
 import { AiOutlineSearch } from "react-icons/ai";
@@ -11,10 +11,6 @@ const SearchBar = () => {
     setActive(!active);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <div className="search">
       <form className="search-bar">
@@ -24,7 +20,7 @@ const SearchBar = () => {
           placeholder="Search"
         />
         <button className="btn" type="submit" onClick={handleIconClick}>
-          <AiOutlineSearch className="icon" />
+          <AiOutlineSearch className="icon"/>
         </button>
       </form>
     </div>
