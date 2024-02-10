@@ -40,7 +40,7 @@ const Nav = () => {
                         onClick={() => { changeSelection("favorites") }}
                         to={'/favorites'}>
 
-                        <GoHeart className='nav__icon' />
+                        <GoHeart className={selected === "favorites" ? 'nav__icon nav__icon--selected' : 'nav__icon'} />
                         {selected === "favorites" ? <p className='nav__text'>Favorites</p> : <></>}
 
                     </NavLink>
