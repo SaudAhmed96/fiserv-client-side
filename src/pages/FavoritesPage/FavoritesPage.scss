@@ -1,1 +1,14 @@
 @import '../../styles/partials/global';
+
+.favorites {
+
+    &__heading {
+        padding: 1rem;
+    }
+
+    &__filter {
+        @include flexBox(row);
+        justify-content: center;
+
+    }
+}
