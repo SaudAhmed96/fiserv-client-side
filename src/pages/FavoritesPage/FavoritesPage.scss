@@ -1,0 +1,93 @@
+@import '../../styles/partials/global';
+
+.favorites {
+
+    &__heading {
+        padding: 1rem;
+        text-align: center;
+        font-family: $regularFont;
+    }
+
+    &__filter {
+        @include flexBox(row);
+        justify-content: center;
+        background-color: $F-Orange;
+        padding: 1.5rem;
+    }
+
+    &__option {
+        color: $F-Black;
+        width: 20rem;
+        text-align: center;
+        font-family: $regularFont;
+
+        &-link {
+            text-decoration: none;
+            color: $F-Black;
+        }
+
+        &:hover {
+            // color: $Slate;
+            background-color: $F-Blue;
+            border-radius: 2rem;
+            // text-decoration: none;
+        }
+
+        &--selected {
+            text-decoration: underline;
+        }
+    }
+
+    &__item {
+        padding: 1rem;
+
+        &-left {
+            margin-right: 2rem;
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $F-Black;
+            @include flexBox(row);
+        }
+
+        &-image {
+            width: 15rem;
+            height: 10rem;
+            object-fit: cover;
+            border-radius: 2rem;
+        }
+
+        &-title {
+            @include table-header;
+            font-size: 1.75rem;
+        }
+
+        &-sub {
+            @include table-data;
+            font-size: 1.5rem;
+        }
+
+        &--grey {
+            background-color: rgba($F-Gray, 0.25);
+        }
+
+        &:hover {
+            background-color: $F-Blue;
+        }
+
+        &-imageRestaurant {
+            width: 16rem;
+            height: 10rem;
+            object-fit: contain;
+            border-radius: 2rem;
+        }
+
+        &-titleRestaurant {
+            @include table-header;
+            font-size: 2.25rem;
+            text-align: center;
+        }
+
+    }
+}
