@@ -9,17 +9,42 @@
         margin: 0.5rem;
     }
 
+    &__item {
+        @include flexBox(row);
+        justify-content: center;
+        border-radius: 4rem;
+        width: 12.5rem;
+        height: 5.5rem;
+
+        &--selected {
+            background-color: $F-Blue
+        }
+    }
+
     &__link {
         @include flexBox(row);
+        align-items: center;
         text-decoration: none;
         list-style-type: none;
     }
 
     &__text {
-        margin-right: 0.5rem;
+        margin: 0.25rem;
+        color: $F-Black;
+        // font-size: 13px;
+        @include table-header;
+        font-family: $boldFont;
     }
 
     &__icon {
+        width: 3rem;
+        height: 3rem;
         margin: 0 0.5rem;
+        fill: $Slate;
+
+        &--selected {
+            fill: $F-Black;
+            align-self: center;
+        }
     }
 }

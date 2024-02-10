@@ -6,7 +6,7 @@ import './Nav.scss'
 import { IoHome } from "react-icons/io5";
 import { GoHeart } from "react-icons/go";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { HiOutlineUser } from "react-icons/hi2";
+import { AiOutlineUser } from "react-icons/ai";
 
 const Nav = () => {
 
@@ -25,39 +25,39 @@ const Nav = () => {
     return (
         <div className='nav'>
             <ul className='nav__list'>
-                <li className='nav__item'>
+                <li className={selected === "home" ? 'nav__item nav__item--selected' : 'nav__item'}>
                     <NavLink
                         className='nav__link'
                         onClick={() => { changeSelection("home") }}
                         to={'/'}>
-                        <IoHome className='nav__icon' />
+                        <IoHome className={selected === "home" ? 'nav__icon nav__icon--selected' : 'nav__icon'} />
                         {selected === "home" ? <p className='nav__text'>Home</p> : <></>}
                     </NavLink>
                 </li>
-                <li className='nav__item'>
+                <li className={selected === "favorites" ? 'nav__item nav__item--selected' : 'nav__item'}>
                     <NavLink
                         className='nav__link'
                         onClick={() => { changeSelection("favorites") }}
                         to={'/favorites'}>
-                        <GoHeart className='nav__icon' />
+                        <GoHeart className={selected === "favorites" ? 'nav__icon nav__icon--selected' : 'nav__icon'} />
                         {selected === "favorites" ? <p className='nav__text'>Wishlist</p> : <></>}
                     </NavLink>
                 </li>
-                <li className='nav__item'>
+                <li className={selected === "checkout" ? 'nav__item nav__item--selected' : 'nav__item'}>
                     <NavLink
                         className='nav__link'
                         onClick={() => { changeSelection("checkout") }}
                         to={'/checkout'}>
-                        <AiOutlineShoppingCart className='nav__icon' />
+                        <AiOutlineShoppingCart className={selected === "checkout" ? 'nav__icon nav__icon--selected' : 'nav__icon'} />
                         {selected === "checkout" ? <p className='nav__text'>Cart</p> : <></>}
                     </NavLink>
                 </li>
-                <li className='nav__item'>
+                <li className={selected === "profile" ? 'nav__item nav__item--selected' : 'nav__item'}>
                     <NavLink
                         className='nav__link'
                         onClick={() => { changeSelection("profile") }}
                         to={'/profile'}>
-                        <HiOutlineUser className='nav__icon' />
+                        <AiOutlineUser className={selected === "profile" ? 'nav__icon nav__icon--selected' : 'nav__icon'} />
                         {selected === "profile" ? <p className='nav__text'>Profile</p> : <></>}
                     </NavLink>
                 </li>
