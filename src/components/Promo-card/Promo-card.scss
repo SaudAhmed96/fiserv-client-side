@@ -1,0 +1,69 @@
+@import '../../styles/partials/global';
+@import '../../styles/partials/variables';
+
+.container {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .promo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 25px;
+        height: 130px;
+        width: 300px;
+        box-shadow: 2px 10px 15px #afafaf;
+        &-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 25px;
+        }
+        &-info {
+            padding: 10px;
+            position: absolute;
+            top: 80%;
+            width: 200px;
+            height: 60px;
+            font-size: 10px;
+            text-align: center;
+            border: none;
+            background-color: #e9c7b7;
+            box-shadow: 1px 5px 15px #6d4a4a;
+            line-height: 15px;
+            .meal, .discount {
+                font-size: 12px;
+            }
+            .prices {
+                display: flex;
+                justify-content: space-around;
+                &-old {
+                  text-decoration: line-through;  
+                }
+                &-new {
+                    color: red;
+                }
+            }
+        }
+        .button {
+            position: relative;
+            &-prev {
+                position: absolute;
+                right: 150px;
+            }
+            &-next {
+                position: absolute;
+                left: 150px;
+            }
+            button {
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+}
