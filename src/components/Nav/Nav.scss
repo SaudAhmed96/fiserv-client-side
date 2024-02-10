@@ -26,6 +26,18 @@
         align-items: center;
         text-decoration: none;
         list-style-type: none;
+        justify-content: center;
+
+
+        &:hover {
+            background-color: $F-Blue;
+            border-radius: 3rem;
+            width: 11rem;
+
+            .nav__icon {
+                fill: $F-Black;
+            }
+        }
     }
 
     &__text {
