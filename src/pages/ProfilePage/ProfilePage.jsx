@@ -1,8 +1,12 @@
 import React from 'react'
+import UserInfo from '../../components/UserInfo/UserInfo';
 
 const ProfilePage = () => {
+    
     return (
-        <div>ProfilePage</div>
+        <>
+            <UserInfo/>
+        </>
     )
 }
 
