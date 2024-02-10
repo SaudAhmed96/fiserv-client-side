@@ -39,8 +39,10 @@ const Nav = () => {
                         className='nav__link'
                         onClick={() => { changeSelection("favorites") }}
                         to={'/favorites'}>
-                        <GoHeart className={selected === "favorites" ? 'nav__icon nav__icon--selected' : 'nav__icon'} />
-                        {selected === "favorites" ? <p className='nav__text'>Wishlist</p> : <></>}
+
+                        <GoHeart className='nav__icon' />
+                        {selected === "favorites" ? <p className='nav__text'>Favorites</p> : <></>}
+
                     </NavLink>
                 </li>
                 <li className={selected === "checkout" ? 'nav__item nav__item--selected' : 'nav__item'}>
