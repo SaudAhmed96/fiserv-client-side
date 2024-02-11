@@ -23,8 +23,13 @@ const HomePage = () => {
         </div>
       </div>
       <div className="promotion">
-        <p>10% OFF Over $30.00</p>
-        <p>10/02/2024 - 20/02/2024</p>
+        <div className="info-date">
+          <div className="info">
+            <p className="disc">10% OFF Over $30.00 </p>
+            <p>ordering from eliggible restaurants</p>
+          </div>
+          <p className="dates">10/02/2024 - 20/02/2024</p>
+        </div>
         <div className="validation">Still Valid</div>
       </div>
       <div className="recommendation">

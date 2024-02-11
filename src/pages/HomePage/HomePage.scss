@@ -37,17 +37,33 @@
   }
   .promotion {
     margin: 5px 0;
-    padding: 10px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 25px;
     background-color: $F-Orange;
+    .info-date {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .disc {
+          color: red;
+          padding-right: 3px;
+        }
+      }
+    }
     .validation {
-      padding: 4px 7px;
+      font-size: 9px;
+      padding: 6px 10px;
       background-color: rgb(52, 255, 106);
-      width: 50px;
-      height: 20px;
+      width: 60px;
+      height: 25px;
       border-radius: 10px;
     }
   }
@@ -58,7 +74,7 @@
       justify-content: space-between;
       align-items: center;
       p {
-        font-size: 10px;
+        font-size: 11px;
       }
     }
   }
