@@ -20,7 +20,7 @@ const SearchBar = () => {
           placeholder="Search"
         />
         <button className="btn" type="submit" onClick={handleIconClick}>
-          <AiOutlineSearch className="icon"/>
+          <AiOutlineSearch className="icon" />
         </button>
       </form>
     </div>
