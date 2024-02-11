@@ -33,12 +33,12 @@
           color: grey;
         }
         &:focus {
-            outline: none;
-            text-align: center;
-            &::placeholder {
-              color: transparent;
-            }
-          }    
+          outline: none;
+          text-align: center;
+          &::placeholder {
+            color: transparent;
+          }
+        }
       }
     }
     .btn {
