@@ -8,7 +8,11 @@ import { GoHeart } from "react-icons/go";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 
+import globalCart from '../globalCart';
+
 const Nav = () => {
+
+
 
     const [selected, setSelected] = useState("");
 

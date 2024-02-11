@@ -3,7 +3,7 @@ import "./DetailsPage.scss"
 
 import SearchBar from '../../components/Search-bar/Search-bar'
 import { IoIosArrowRoundBack } from "react-icons/io";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import nasiGoreng from '../../assets/images/nasiGoreng.png'
 
 import { GoNoEntry } from "react-icons/go";
@@ -12,9 +12,12 @@ import { GoPlusCircle } from "react-icons/go";
 const DetailsPage = () => {
 
     const [quantity, setQuantity] = useState(1);
+    const navigate = useNavigate();
 
     const submitHandler = (event) => {
         event.preventDefault()
+        console.log('hello')
+        navigate('/')
     }
 
     return (
@@ -39,7 +42,7 @@ const DetailsPage = () => {
                         <p className='card__price'>$20</p>
                         <p className='card__discount'>Today's Discount 10%</p>
 
-                        <form className='card__form'>
+                        <form className='card__form' onSubmit={submitHandler}>
                             <div className='form__section'>
                                 <p className='form__section-header'>Option</p>
                                 <div className='form__option'>
@@ -57,7 +60,7 @@ const DetailsPage = () => {
                                 </div>
                             </div>
 
-                            <div className='form__section' onSubmit={(event) => { submitHandler(event) }}>
+                            <div className='form__section'>
                                 <p className='form__section-header'>Option</p>
                                 <div className='form__option'>
                                     <label className='form__label'>Peanuts</label>
@@ -99,26 +102,17 @@ const DetailsPage = () => {
                                     <p className='form__discount-number'>${quantity * 20 * 0.9}</p>
                                 </div>
 
-                                <div
+                                <button
                                     className='form__submit'
                                     type='submit'
                                 >
                                     Add To Cart
-                                </div>
+                                </button>
                             </div>
-
-
-
                         </form>
-
-
                     </div>
-
                 </div>
-
             </div>
-
-
         </div>
     )
 }
