@@ -7,6 +7,7 @@ import ProfilePage from './pages/ProfilePage/ProfilePage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Nav from './components/Nav/Nav';
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
+import DetailsPage from './pages/DetailsPage/DetailsPage';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<HomePage />} />
+        <Route path="/details" element={<DetailsPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/profile" element={<ProfilePage />} />

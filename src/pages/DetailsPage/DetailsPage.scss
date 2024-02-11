@@ -1,0 +1,22 @@
+@import '../../styles/partials/global';
+
+
+.details {
+
+    &__top {
+        @include flexBox(row);
+        justify-content: space-between;
+
+        &-right {
+            flex-grow: 1;
+            align-self: center;
+        }
+    }
+
+    &__back {
+        width: 3rem;
+        height: 3rem;
+
+        fill: $F-Black;
+    }
+}
