@@ -73,7 +73,7 @@ const FavoritesPage = () => {
                             </NavLink>
                         </li>
                         <li className='favorites__item  favorites__item--grey'>
-                            <NavLink className='favorites__item-link' to={'/'}>
+                            <NavLink className='favorites__item-link' to={'/details'}>
                                 <div className='favorites__item-left'>
                                     <img className='favorites__item-image' src={nasiGoreng} />
                                 </div>
