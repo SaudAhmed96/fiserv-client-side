@@ -1,0 +1,56 @@
+@import "../../styles/partials/global";
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    input {
+      border: 2px solid grey;
+      font-size: 11px;
+      padding: 3px;
+      border-radius: 50px;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      transition: 0.4s ease;
+      &::placeholder {
+        color: transparent;
+      }
+      &.active {
+        border: none;
+        background-color: #f0f0f0;
+        width: 40vw;
+        height: 20px;
+        border-radius: 8px;
+        &::placeholder {
+          text-align: center;
+          color: grey;
+        }
+        &:focus {
+          outline: none;
+          text-align: center;
+          &::placeholder {
+            color: transparent;
+          }
+        }
+      }
+    }
+    .btn {
+      position: absolute;
+      top: 70%;
+      transform: translateY(-60%);
+      font-size: 17px;
+      left: 2px;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: #afafaf;
+    }
+  }
+}
