@@ -30,7 +30,7 @@ function CheckoutPage() {
                 </div>
             </div>
             <div className='checkout-page__destination'>
-                <p className='checkout-page__address'>Deliver to 2222-3698 Citation Dr</p>
+                <p className='checkout-page__address'>Deliver to 1234 Front St.</p>
                 <p className='checkout-page__edit'>Edit</p>
             </div>
             <div className='checkout-page__body'>

@@ -20,7 +20,7 @@ const UserInfo = () => {
         <div className='user-info'>
             <div className='user-info__pfp-name'>
                 <img className='user-info__pfp' src={pfp} alt="profile icon"/>
-                <h1 className='user-info__name'>John Smith</h1>
+                <h1 className='user-info__name'>David Smith</h1>
             </div>
             
             <div className='user-info__details'>
@@ -42,7 +42,7 @@ const UserInfo = () => {
                 </div>
 
                 <h3 className='user-info__field'>Email</h3>
-                <p className='user-info__input'>johnsmith@gmail.com</p>
+                <p className='user-info__input'>davidsmith@gmail.com</p>
                 
                 <h3 className='user-info__field'>Phone Number</h3>
                 <p className='user-info__input'>905-111-2222</p>
