@@ -26,7 +26,7 @@ const HomePage = () => {
         <div className="info-date">
           <div className="info">
             <p className="disc">10% OFF Over $30.00 </p>
-            <p>ordering from eliggible restaurants</p>
+            <p>ordering from eligible restaurants</p>
           </div>
           <p className="dates">10/02/2024 - 20/02/2024</p>
         </div>
@@ -40,7 +40,7 @@ const HomePage = () => {
         <PromoCard />
       </div>
       <div className="recommendation">
-        <h2>This week Top!</h2>
+        <h2>This Week's Top Choices!</h2>
         <WeekTop />
       </div>
     </div>

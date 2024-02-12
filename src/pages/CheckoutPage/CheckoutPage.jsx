@@ -3,6 +3,7 @@ import arrow_left from '../../assets/images/arrow_left.png';
 import avatar from '../../assets/images/avatar.png'
 import { Link } from 'react-router-dom';
 import './CheckoutPage.scss';
+import Searchbar from '../../components/Search-bar/Search-bar';
 
 import { BsFilterLeft } from "react-icons/bs";
 import { IoIosArrowRoundBack } from "react-icons/io";
@@ -11,6 +12,9 @@ import CheckoutCart from '../../components/CheckoutCart/CheckoutCart';
 
 function CheckoutPage() {
 
+    const couponClick = () => {
+        window.location.href = "/coupons";
+    }
     return (
         <div className='checkout-page'>
             <div className='checkout-page__header'>

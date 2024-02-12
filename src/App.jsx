@@ -9,6 +9,7 @@ import Nav from './components/Nav/Nav';
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage';
 import DetailsPage from './pages/DetailsPage/DetailsPage';
 import PaymentScreen from './components/PaymentScreen/PaymentScreen';
+import CouponPage from './pages/CouponPage/CouponPage';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/payment" element={<PaymentScreen />} />
+        <Route path="/coupons" element={<CouponPage />}/>
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/error" element={<ErrorPage />} />
         <Route path="*" element={<Navigate to="/error" replace={true} />} />
