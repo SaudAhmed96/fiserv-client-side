@@ -5,6 +5,8 @@ import SearchBar from '../../components/Search-bar/Search-bar'
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { NavLink, useNavigate } from 'react-router-dom';
 import nasiGoreng from '../../assets/images/nasiGoreng.png'
+import { BsFilterLeft } from "react-icons/bs";
+import avatar from '../../assets/images/avatar.png'
 
 import { GoNoEntry } from "react-icons/go";
 import { GoPlusCircle } from "react-icons/go";
@@ -30,11 +32,14 @@ const DetailsPage = () => {
         <div className='details'>
 
             <div className='details__top'>
-                <NavLink className='details__top-left' onClick={() => { history.back() }}>
-                    <IoIosArrowRoundBack className='details__back' />
-                </NavLink>
+                <div className='details__top-left'>
+                    <NavLink className='details__top-back' onClick={() => { history.back() }}>
+                        <IoIosArrowRoundBack className='details__back' />
+                    </NavLink>
+                </div>
                 <div className='details__top-right'>
                     <SearchBar />
+                    <BsFilterLeft className='details__top-filter' />
                 </div>
             </div>
 

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
+import avatar from '../../assets/images/avatar.png'
+import { BsFilterLeft } from "react-icons/bs";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 import nasiGoreng from '../../assets/images/nasiGoreng.png'
 import assortedSushi from '../../assets/images/assortedSushi.png'
@@ -12,6 +15,7 @@ import toneSushi from '../../assets/images/logos/toneSushi.png'
 import shatterAbbas from '../../assets/images/logos/shatterAbbas.jpg'
 
 import './FavoritesPage.scss'
+import SearchBar from '../../components/Search-bar/Search-bar';
 
 const FavoritesPage = () => {
 
@@ -22,6 +26,22 @@ const FavoritesPage = () => {
 
     return (
         <div className='favorites'>
+            <div className='favorites__header'>
+                <div className='favorites__left'>
+                    <Link to={'/'}>
+                        <IoIosArrowRoundBack className='favorites__back'/>
+                    </Link>
+                    <div className='favorites__info'>
+                        <img className='favorites__avatar' src={avatar} />
+                        <p className='favorites__name'>David</p>
+                    </div>
+                </div>
+
+                <div className='favorites__right'>
+                    <SearchBar className='favorites__search' />
+                    <BsFilterLeft className='favorites__filters' />
+                </div>
+            </div>
             <h1 className='favorites__heading'>My Favorites</h1>
             <div className='favorites__filter'>
                 <h2 className={selected ? 'favorites__option favorites__option--selected' : 'favorites__option'}>
