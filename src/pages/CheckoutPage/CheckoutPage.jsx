@@ -12,9 +12,6 @@ import CheckoutCart from '../../components/CheckoutCart/CheckoutCart';
 
 function CheckoutPage() {
 
-    const couponClick = () => {
-        window.location.href = "/coupons";
-    }
     return (
         <div className='checkout-page'>
             <div className='checkout-page__header'>
