@@ -5,6 +5,45 @@
   padding-bottom: 35px;
   display: flex;
   flex-direction: column;
+=======
+.checkout-page {
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        padding: 8px 16px;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 85px;
+    }
+
+    &__arrow {
+        width: 20px;
+        height: 15px;
+    }
 
   &__header {
     display: flex;
