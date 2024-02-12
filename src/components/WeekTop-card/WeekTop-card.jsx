@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./WeekTop-card.scss";
 
@@ -8,14 +8,14 @@ import FettuciniAlfredo from "../../assets/images/Screenshot 2024-02-09 at 5.06.
 
 const weekDeal = [
   {
-    meal: "Lamb Biryani",
-    restaurant: "Karahi Boys",
-    img: LambBiryani,
-  },
-  {
     meal: "Assorted Sushi",
     restaurant: "To-Ne Sushi",
     img: AssortedSushi,
+  },
+  {
+    meal: "Lamb Biryani",
+    restaurant: "Karahi Boys",
+    img: LambBiryani,
   },
   {
     meal: "Fetuccini Alfredo",
@@ -24,6 +24,16 @@ const weekDeal = [
   },
 ];
 const WeekTop = () => {
+  const [centeredItem, setCenteredItem] = useState(1.5); 
+
+  useEffect(() => {
+    const container = document.querySelector(".contain ul");
+    const itemWidth = container.scrollWidth / weekDeal.length;
+    const scrollPosition = centeredItem * itemWidth - container.clientWidth / 2;
+
+    container.scrollLeft = scrollPosition;
+  }, [centeredItem]);
+
   return (
     <div className="contain">
       <ul>

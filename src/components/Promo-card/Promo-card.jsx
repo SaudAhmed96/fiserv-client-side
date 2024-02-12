@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Promo-card.scss";
 
@@ -8,18 +8,18 @@ import FettuciniAlfredo from "../../assets/images/Screenshot 2024-02-09 at 5.06.
 
 const discounts = [
   {
-    meal: "Nasi Goreng",
-    todayDiscount: "10%",
-    price: "$20",
-    newPrice: "$18",
-    img: NasiGoreng,
-  },
-  {
     meal: "Assorted Sushi",
     todayDiscount: "15%",
     price: "$25",
     newPrice: "$21.25",
     img: AssortedSushi,
+  },
+  {
+    meal: "Nasi Goreng",
+    todayDiscount: "10%",
+    price: "$20",
+    newPrice: "$18",
+    img: NasiGoreng,
   },
   {
     meal: "Fetuccini Alfredo",
@@ -30,6 +30,15 @@ const discounts = [
   },
 ];
 const PromoCard = () => {
+  const [centeredItemIndex, setCenteredItemIndex] = useState(1.5); 
+
+  useEffect(() => {
+    const container = document.querySelector(".container ul");
+    const itemWidth = container.scrollWidth / discounts.length;
+    const scrollPosition = centeredItemIndex * itemWidth - container.clientWidth / 2;
+
+    container.scrollLeft = scrollPosition;
+  }, [centeredItemIndex]);
   return (
     <div className="container">
       <ul>

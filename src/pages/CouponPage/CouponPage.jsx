@@ -6,11 +6,11 @@ import { GiSpeaker } from "react-icons/gi";
 
 const CouponPage = () => {
   const exitClick = () => {
-    window.location.href = "/";
+    window.location.href = "/checkout";
   };
 
   const continueClick = () => {
-    window.location.href = "/checkout";
+    window.location.href = "/payment";
   };
 
   return (

@@ -7,12 +7,15 @@ import { Link } from 'react-router-dom';
 
 import { GoNoEntry } from "react-icons/go";
 import { GoPlusCircle } from "react-icons/go";
+import { LiaTagSolid } from "react-icons/lia";
+import { RiArrowUpSLine } from "react-icons/ri";
+
 
 function CheckoutCart() {
     const [quantity, setQuantity] = useState(1);
 
-    const couponClick = () => {
-        window.location.href = "/coupons";
+    const couponPageClick = () => {
+        window.location.href = "/coupons"
     }
 
     return (
@@ -24,7 +27,10 @@ function CheckoutCart() {
             <div className='checkout-page__body'>
                 <div className='checkout-page__item'>
                     <div className='checkout-page__cart-left'>
-                        <img className='checkout-page__food' src={food_one} />
+                        <div className='input-img'>
+                            <input type='radio'/>
+                            <img className='checkout-page__food' src={food_one} />
+                        </div>
                         <div className='checkout-page__qty'>
                             <div className='checkout-page__quantity'>
                                 <GoNoEntry
@@ -55,17 +61,23 @@ function CheckoutCart() {
                     <p className='checkout-page__text'>Grand Total</p>
                     <p className='checkout-page__total'>${quantity * 20 * 0.9}</p>
                 </div>
-                <div className='checkout-page__coupons' onClick={couponClick}>
+                <div className='checkout-page__coupons' onClick={couponPageClick}>
                     <p className='checkout-page__texts'>Check Coupon</p>
                     <img className='checkout-page__arrows' src={arrow_right} />
                 </div>
                 <div className='checkout-page__disclosures'>
-                    <div className='checkout-page__expand'>
-                        <img className='checkout-page__tag' />
-                        <p className='checkout-page__amount'>3</p>
-                        <img className='checkout-page__up' />
+                    <div className='expand'>
+                        <LiaTagSolid className='tag'/>
+                        <p className='amount'>3</p>
+                        <RiArrowUpSLine className='arrowup'/>
                     </div>
-                    <p className='checkout-page__disclosure'>Order $40 or more for free delivery or to use 10% off coupon</p>
+                    <div className='checkout-page__disclosure'>
+                        <p>Order</p>
+                        <p className='price'>$40</p>
+                        <p>or more for free delivery or to use</p>
+                        <p className='price'>10%</p>
+                        <p>off coupon</p>
+                    </div>
                 </div>
                 <div className='checkout-page__button'>
                     <Link to={"/payment"}>

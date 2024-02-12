@@ -8,12 +8,17 @@ import JohnDavid from "../../assets/images/JohnDavid.png";
 import { BsFilterLeft } from "react-icons/bs";
 
 const HomePage = () => {
+
+  const userClick = () => {
+    window.location.href = "/profile";
+  }
+
   return (
     <div className="home">
       <div className="home-top">
         <div className="home-top_left">
           <div className="user">
-            <img src={JohnDavid} />
+            <img src={JohnDavid} onClick={userClick}/>
           </div>
           <div className="greeting">Hey, David</div>
         </div>
