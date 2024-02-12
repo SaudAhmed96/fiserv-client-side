@@ -6,6 +6,7 @@
     &__top {
         @include flexBox(row);
         justify-content: space-between;
+        padding: 1rem;
 
         &-right {
             flex-grow: 1;
@@ -16,7 +17,161 @@
     &__back {
         width: 3rem;
         height: 3rem;
-
         fill: $F-Black;
+    }
+
+    &__image {
+        width: 100vw;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__card {
+        padding: 2rem 5rem;
+        padding-bottom: 11rem;
+        width: 100vw;
+        min-height: 10rem;
+        @include flexBox(column);
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -3.8rem;
+        border-radius: 3.75rem;
+        background-color: $White;
+    }
+}
+
+.card {
+    &__food {
+        @include table-data;
+        font-size: 2rem;
+    }
+
+    &__discount {
+        @include table-data;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__price {
+        @include table-data;
+        font-size: 1.5rem;
+        align-self: flex-start;
+    }
+
+    &__form {
+        width: 100%;
+    }
+}
+
+.form {
+    &__section {
+        margin-bottom: 2rem;
+    }
+
+    &__section-header {
+        @include table-header;
+        font-size: 1.65rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__option {
+        @include flexBox(row);
+        justify-content: space-between;
+        margin-bottom: 0.25rem;
+    }
+
+    &__label {
+        @include table-data;
+        font-size: 1.5rem;
+    }
+
+    &__quantity {
+        background-color: $F-Orange;
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        // fill: $F-Gray;
+        // background-color: $White;
+        border-radius: 2rem;
+    }
+
+    &__bottom {
+        &-qty {
+            @include flexBox(row);
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-discount {
+            @include flexBox(row);
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+    }
+
+    &__quantity {
+        @include flexBox(row);
+        padding: 0.5rem;
+        justify-content: space-between;
+        align-items: center;
+        width: 12rem;
+        border-radius: 2rem;
+
+        &-number {
+            @include table-data;
+            font-size: 1.65rem;
+            // background-color: $White;
+            // width: 2rem;
+        }
+    }
+
+    &__cost {
+        width: 12rem;
+        padding: 0.5rem;
+        border-radius: 2rem;
+        background-color: $F-Orange;
+        text-align: center;
+    }
+
+    &__discount {
+        &-text {
+            @include table-header;
+            font-size: 1.65rem;
+        }
+
+        &-number {
+            @include table-data;
+            font-size: 1.65rem;
+
+            width: 12rem;
+            padding: 0.5rem;
+            border-radius: 2rem;
+            background-color: $F-Orange;
+            text-align: center;
+        }
+    }
+
+    &__submit {
+        margin-top: 2rem;
+        width: 100%;
+        border: none;
+        border-radius: 2rem;
+        background-color: $F-Gray;
+        color: $White;
+        padding: 0.5rem;
+        text-align: center;
+        @include table-data;
+        font-size: 1.65rem;
+
+        &:hover {
+            background-color: $F-DarkBlue;
+            cursor: pointer;
+        }
     }
 }
