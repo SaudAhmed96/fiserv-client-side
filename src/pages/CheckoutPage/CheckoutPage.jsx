@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './CheckoutPage.scss';
 
 import { BsFilterLeft } from "react-icons/bs";
+import { IoIosArrowRoundBack } from "react-icons/io";
 import SearchBar from '../../components/Search-bar/Search-bar';
 import CheckoutCart from '../../components/CheckoutCart/CheckoutCart';
 
@@ -15,7 +16,7 @@ function CheckoutPage() {
             <div className='checkout-page__header'>
                 <div className='checkout-page__left'>
                     <Link to={'/details'}>
-                        <img className='checkout-page__arrow' src={arrow_left} />
+                        <IoIosArrowRoundBack className='payment-screen__back' />
                     </Link>
                     <div className='checkout-page__info'>
                         <img className='checkout-page__avatar' src={avatar} />
