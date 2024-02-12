@@ -11,6 +11,10 @@ import { GoPlusCircle } from "react-icons/go";
 function CheckoutCart() {
     const [quantity, setQuantity] = useState(1);
 
+    const couponClick = () => {
+        window.location.href = "/coupons";
+    }
+
     return (
         <div className='checkout-page'>
             <div className='checkout-page__destination'>
@@ -51,7 +55,7 @@ function CheckoutCart() {
                     <p className='checkout-page__text'>Grand Total</p>
                     <p className='checkout-page__total'>${quantity * 20 * 0.9}</p>
                 </div>
-                <div className='checkout-page__coupons'>
+                <div className='checkout-page__coupons' onClick={couponClick}>
                     <p className='checkout-page__texts'>Check Coupon</p>
                     <img className='checkout-page__arrows' src={arrow_right} />
                 </div>
