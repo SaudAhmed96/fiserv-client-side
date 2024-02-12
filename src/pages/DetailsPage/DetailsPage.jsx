@@ -8,15 +8,21 @@ import nasiGoreng from '../../assets/images/nasiGoreng.png'
 
 import { GoNoEntry } from "react-icons/go";
 import { GoPlusCircle } from "react-icons/go";
+import { useDispatch, useSelector } from 'react-redux';
+import { increaseCount } from '../../reducers/cartSlice';
 
 const DetailsPage = () => {
 
     const [quantity, setQuantity] = useState(1);
     const navigate = useNavigate();
 
+    const cart = useSelector(state => state.cartTracker)
+    const dispatch = useDispatch();
+
     const submitHandler = (event) => {
         event.preventDefault()
-        console.log('hello')
+        console.log('hello', cart.count)
+        dispatch(increaseCount())
         navigate('/')
     }
 
