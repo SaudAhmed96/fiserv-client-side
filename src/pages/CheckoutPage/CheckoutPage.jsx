@@ -10,6 +10,9 @@ import SearchBar from '../../components/Search-bar/Search-bar';
 import CheckoutCart from '../../components/CheckoutCart/CheckoutCart';
 
 function CheckoutPage() {
+    const userClick = () => {
+        window.location.href = "/profile";
+        }
 
     return (
         <div className='checkout-page'>
@@ -19,7 +22,7 @@ function CheckoutPage() {
                         <IoIosArrowRoundBack className='payment-screen__back' />
                     </Link>
                     <div className='checkout-page__info'>
-                        <img className='checkout-page__avatar' src={avatar} />
+                        <img className='checkout-page__avatar' src={avatar} onClick={userClick}/>
                         <p className='checkout-page__name'>David</p>
                     </div>
                 </div>

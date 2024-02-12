@@ -24,6 +24,10 @@ const FavoritesPage = () => {
     useEffect(() => {
     }, [selected])
 
+    const userClick = () => {
+        window.location.href = "/profile";
+        }
+
     return (
         <div className='favorites'>
             <div className='favorites__header'>
@@ -32,7 +36,7 @@ const FavoritesPage = () => {
                         <IoIosArrowRoundBack className='favorites__back'/>
                     </Link>
                     <div className='favorites__info'>
-                        <img className='favorites__avatar' src={avatar} />
+                        <img className='favorites__avatar' src={avatar} onClick={userClick}/>
                         <p className='favorites__name'>David</p>
                     </div>
                 </div>
