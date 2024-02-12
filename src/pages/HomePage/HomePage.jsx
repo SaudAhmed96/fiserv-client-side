@@ -10,7 +10,7 @@ import { BsFilterLeft } from "react-icons/bs";
 const HomePage = () => {
 
   const userClick = () => {
-    window.location.href = "/location";
+    window.location.href = "/profile";
   }
 
   return (

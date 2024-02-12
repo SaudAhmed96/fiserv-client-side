@@ -10,7 +10,7 @@ const CouponPage = () => {
   };
 
   const continueClick = () => {
-    window.location.href = "/checkout";
+    window.location.href = "/payment";
   };
 
   return (

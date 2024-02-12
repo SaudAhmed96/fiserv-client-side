@@ -25,7 +25,7 @@ function CheckoutPage() {
                 </div>
                 <div className='checkout-page__right'>
                     <SearchBar className='checkout-page__search' />
-                    <BsFilterLeft className='checkout-page__filter' />
+                    <BsFilterLeft className='filter' />
                 </div>
             </div>
             <CheckoutCart />

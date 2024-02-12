@@ -1,3 +1,6 @@
+@import "../../styles/partials/global";
+@import "../../styles/partials/variables";
+
 .checkout-page {
     display: flex;
     flex-direction: column;
@@ -32,6 +35,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        .input-img {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img {
+                margin: 10px;
+            }
+        }
     }
 
     &__cart-right {
@@ -119,17 +130,42 @@
     &__disclosures {
         display: flex;
         flex-direction: row;
-        background-color: rgb(187, 187, 187);
+        background-color: $F-Orange;
         align-items: center;
-        height: 42px;
+        height: 35px;
         padding: 0 16px;
         justify-content: space-evenly;
+        .expand {
+            background-color: #a2a2a2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 15px;
+            border-radius: 10px;
+            .tag {
+                font-size: 10px;
+            }
+            .amount {
+                padding-left: 3px;
+            }
+            .arrowup {
+                font-size: 10px;
+            }
+        }
     }
 
     &__disclosure {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         text-align: center;
         font-size: 9px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        .price {
+            padding: 0 4px;
+            color: red;
+        }
     }
 
     &__button {
