@@ -6,9 +6,13 @@ import food_one from '../../assets/images/nasi_img.png'
 import food_two from '../../assets/images/creamy_pasta.png'
 import arrow_right from '../../assets/images/arrow_right.png'
 import './CheckoutPage.scss';
+import Searchbar from '../../components/Search-bar/Search-bar';
 
 function CheckoutPage() {
 
+    const couponClick = () => {
+        window.location.href = "/coupons";
+    }
     return (
         <div className='checkout-page'>
             <div className='checkout-page__header'>
@@ -21,7 +25,7 @@ function CheckoutPage() {
                 </div>
 
                 <div className='checkout-page__right'>
-                    <img className='checkout-page__search' />
+                    <Searchbar/>
                     <img className='checkout-page__filter' src={filter} />
                 </div>
             </div>
@@ -66,7 +70,7 @@ function CheckoutPage() {
                     <p className='checkout-page__text'>Grand Total</p>
                     <p className='checkout-page__total'>$36</p>
                 </div>
-                <div className='checkout-page__coupons'>
+                <div className='checkout-page__coupons' onClick={couponClick}>
                     <p className='checkout-page__texts'>Check Coupon</p>
                     <img className='checkout-page__arrows' src={arrow_right} />
                 </div>
