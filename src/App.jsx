@@ -22,7 +22,7 @@ function App() {
         <Route path="/details" element={<DetailsPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/payment" element={<PaymentScreen/>}/>
+        <Route path="/payment" element={<PaymentScreen />} />
         <Route path="/coupons" element={<CouponPage />}/>
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/error" element={<ErrorPage />} />
