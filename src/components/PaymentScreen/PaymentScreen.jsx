@@ -1,6 +1,5 @@
 import React from 'react';
 import food_one from '../../assets/images/nasi_img.png'
-import arrow_left from '../../assets/images/arrow_left.png';
 import avatar from '../../assets/images/avatar.png'
 import ApplePayButton from '../../assets/images/apple-pay-button.png';
 import GooglePayButton from '../../assets/images/google-pay-button.png';
